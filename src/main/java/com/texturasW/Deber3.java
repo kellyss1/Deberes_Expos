@@ -1,4 +1,4 @@
-package com.rasterizacion;
+package com.texturasW;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +16,7 @@ import java.util.Arrays;
     4. W-Buffering (Superposición con y sin buffer)
     5. Completo (Textura + Color + 1/W + W-Buffer)
 */
-public class Deber2 extends JPanel {
+public class Deber3 extends JPanel {
 
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
@@ -46,7 +46,7 @@ public class Deber2 extends JPanel {
         }
     }
 
-    public Deber2() {
+    public Deber3() {
         canvas = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         textura = new BufferedImage(256, 256, BufferedImage.TYPE_INT_RGB);
         wBuffer = new float[WIDTH][HEIGHT];
@@ -330,7 +330,7 @@ public class Deber2 extends JPanel {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Taller II: Rasterizador por Software (Compañeros)");
-            Deber2 panel = new Deber2();
+            Deber3 panel = new Deber3();
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setLayout(new BorderLayout());
             frame.add(panel, BorderLayout.CENTER);
